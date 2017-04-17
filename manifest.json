@@ -9,14 +9,12 @@
     	],
     	"persistent":false
     },
-    "content_scripts": {
-        "scripts": [
-        	{
-        		"matches":["*://video.colorv.cn/play/"],
-        		"js":["jquery-3.2.1.min.js","main.js"]
-        	}
-        ],
-    },
+    "content_scripts": [
+       	{
+       		"matches":["*://video.colorv.cn/play/*"],
+       		"js":["jquery-3.2.1.min.js","main.js"]
+       	}
+    ],
     "permissions": [
         "downloads"
     ]
