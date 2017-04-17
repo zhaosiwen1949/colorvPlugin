@@ -1,15 +1,23 @@
 {
     "manifest_version": 2,
-    "name": "Save the vedio",
+    "name": "Save the video",
     "version": "1.0",
-    "description": "Save the vedio made by colorv",
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": false
+    "description": "Save the video made by colorv",
+    "background":{
+    	"scripts":[
+    		"background.js"
+    	],
+    	"persistent":false
+    },
+    "content_scripts": {
+        "scripts": [
+        	{
+        		"matches":["*://video.colorv.cn/play/"],
+        		"js":["jquery-3.2.1.min.js","main.js"]
+        	}
+        ],
     },
     "permissions": [
-        "activeTab",
-        "contextMenus",
         "downloads"
     ]
 }
