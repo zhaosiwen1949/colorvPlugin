@@ -1,6 +1,6 @@
 var tmp = $("#video_title>h1").clone();
 tmp.find(":nth-child(n)").remove();
-var tile = tmp.text();
+var title = tmp.text();
 var src = $("video#myVideo").attr("src");
 
 //console.log(title);
